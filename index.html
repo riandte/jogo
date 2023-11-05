@@ -5,81 +5,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Jogo de Calculo</h1>
-  <form id="equation-form">
-    <span class="input-grid">
-        <label for="e"></label>
-        <input type="number" class="e input-number" required> <p class="sinal s1">+</p>
+    <div class="title"><h1>Jogo de Cálculo</h1></div>
+    <form id="equation-form">
+      <span class="input-grid">
+          <label for="e"></label>
+          <input type="number" class="e input-number" required> <p class="sinal s1"><i class="fa-solid fa-plus"></i></p>
 
-        <label for="f"></label>
-        <input type="number" class="f input-number" required> <p class="sinal s2">+</p>
+          <label for="f"></label>
+          <input type="number" class="f input-number" required> <p class="sinal s2"><i class="fa-solid fa-plus"></i></p>
 
-        <label for="g"></label>
-        <input type="number" class="g input-number" required> <p class="sinal s3">+</p>
-        <p class="nada"></p>
-        
-        <label for="h"></label>
-        <input type="number" class="h input-number" required> <p class="sinal s4">-</p>
-        <p class="result a">= a</p>
-        <p class="result b">= b</p>
-        <p class="result c">= c</p>
-        <p class="result d">= d</p>
-    </span >
+          <label for="g"></label>
+          <input type="number" class="g input-number" required> <p class="sinal s3"><i class="fa-solid fa-plus"></i></p>
+          <p class="nada"></p>
+          
+          <label for="h"></label>
+          <input type="number" class="h input-number" required> <p class="sinal s4"><i class="fa-solid fa-minus"></i></p>
+          <p class="result a">= a</p>
+          <p class="result b">= b</p>
+          <p class="result c">= c</p>
+          <p class="result d">= d</p>
+      </span >
 
-    <div ><button class="botao" type="submit">
-      <span>Verificar</span>
-      <svg viewBox="0 0 13 10" height="10px" width="15px">
-        <path d="M1,5 L11,5"></path>
-        <polyline points="8 1 12 5 8 9"></polyline>
-      </svg>
+      <div ><button class="botao" type="submit">
+        <span>Verificar</span>
+        <svg viewBox="0 0 10 12" height="20px" width="30px">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
 
-    </button></div>
-  </form>
+      </button></div>
+    </form>
 
-  <p id="result"></p>
+    <p id="result"></p>
 
-  <script>
-    // Função para gerar um número aleatório em um intervalo específico
-    function getRandomNumber(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
 
-    // Gerar números aleatórios para a, b, c e d
-    const re = getRandomNumber(0, 10);
-    const rf = getRandomNumber(0, 10);
-    const rg = getRandomNumber(5, 10);
-    const rh = getRandomNumber(0, 5);
+<script src="main.js"></script>
+<script src="https://kit.fontawesome.com/c9ac92c7cf.js" crossorigin="anonymous"></script>
 
-    // Exibir as equações
-    const resultA = document.querySelector(".a");
-    const resultB = document.querySelector(".b");
-    const resultC = document.querySelector(".c");
-    const resultD = document.querySelector(".d");
-    resultA.innerHTML = re+rf;
-    resultB.innerHTML = rg-rh;
-    resultC.innerHTML = rf+rh;
-    resultD.innerHTML = re+rg;
-    
-    // Capturar o formulário e lidar com a submissão
-    const equationForm = document.getElementById("equation-form");
-    equationForm.addEventListener("submit", function(event) {
-      event.preventDefault();
 
-      // Obter os valores digitados pelo jogador
-      const e = parseInt(document.querySelector(".e").value);
-      const f = parseInt(document.querySelector(".f").value);
-      const g = parseInt(document.querySelector(".g").value);
-      const h = parseInt(document.querySelector(".h").value);
-
-      // Verificar se as respostas estão corretas
-      if (re === e && rf === f && rg === g && rh === h) {
-        document.getElementById("result").innerHTML = "Parabéns! Suas respostas estão corretas.";
-        setTimeout(function(){
-          window.location.reload(1); },3000);
-      } else {
-        document.getElementById("result").innerHTML = "Tente novamente. Suas respostas estão incorretas.";
-      }
-    });
-  </script>
 </body>
 </html>
