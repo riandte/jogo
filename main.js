@@ -29,7 +29,7 @@ equationForm.addEventListener("submit", function(event) {
   const e = parseInt(document.querySelector(".e").value);
   const f = parseInt(document.querySelector(".f").value);
   const g = parseInt(document.querySelector(".g").value);
-  const h = parseInt(document.querySelector(".h").value); 
+  const h = parseInt(document.querySelector(".h").value);
 
   // Verificar se as respostas estão corretas
   if (re === e && rf === f && rg === g && rh === h) {
