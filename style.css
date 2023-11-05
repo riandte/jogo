@@ -1,0 +1,159 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.966);
+    font-family: "Ubuntu", sans-serif;
+    padding: 15% 0px 15% 0px;
+    scale: 200%;
+}
+label {
+    position: absolute;
+}
+span {
+    justify-content: center;
+}
+.sinal{
+    position: relative;
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    margin: auto 0 auto 0;
+    text-shadow: 1px 1px 20px;
+}
+.s1{
+    grid-column: 2;
+    grid-row: 1;
+}
+.s2{
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: -26%;
+}
+.s3{
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: -26%;
+}
+.s4{
+    grid-column: 2;
+    grid-row: 3;
+}
+.result{
+    background-color: #9c9c9c;
+    border-radius: 20%;
+    text-align: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+
+}
+.input-number{
+    text-align: center;
+    font-size: large;
+    width: 58px;
+    height: 58px;
+    border: #797979;
+    border-radius: 5px;
+    background-color: #b6b6b6;
+    box-shadow: 20px 20px 60px #e0e0e0,
+                -20px -20px 60px #ffffff;
+}
+.input-number::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+.a{
+    grid-column: 4;
+    grid-row: 1;
+}
+.b{
+    grid-column: 4;
+    grid-row: 3;
+}
+.c{
+    grid-column: 3;
+    grid-row: 4;
+}
+.d{
+    grid-column: 1;
+    grid-row: 4;
+}
+.e{
+    grid-column: 1;
+    grid-row: 1;
+}
+.f{
+    grid-column: 3;
+    grid-row: 1;
+}
+.g{
+    grid-column: 1;
+    grid-row: 3;
+}
+.h{
+    grid-column: 3;
+    grid-row: 3;
+}
+.nada{
+    grid-column: 2;
+    grid-row: 2;
+}
+.e, .f, .g, .h{
+    background-color: rgba(212, 212, 212, 0.575);
+    width: 50px;
+    height: 50px;
+}
+.input-grid{
+    display: grid;
+    grid-template-columns: 58px 3px 58px 25px;
+    grid-template-rows: 58px 3px 58px 25px;
+    place-items: center;
+}
+.botao{
+    position: relative;
+    margin: 30px 15px;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+   }
+.botao:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b6b6b6;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+.botao span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #000000;
+   }
+.botao svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #000000;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+.botao:hover:before {
+    width: 100%;
+    background: #b6b6b6;
+   }
+.botao:hover svg {
+    transform: translateX(0);
+   }
