@@ -5,8 +5,7 @@ body{
     align-items: center;
     background-color: rgba(255, 255, 255, 0.966);
     font-family: "poppins", sans-serif;
-    scale: 100%;
-    width: 100%;
+    margin: 0;
 }
 label {
     position: absolute;
@@ -16,8 +15,9 @@ label {
     display: flex;
     margin: 0px;
     justify-content: center;
-    font-size: 50px;
     align-items: center;
+    text-align: center;
+    font-size: 200%;
     background-color: rgb(226, 226, 226);
     width: 100%;
     height: 130px;
@@ -27,9 +27,10 @@ label {
 .sinal{
     position: relative;
     display: flex;
-    font-size: 60px;
+    font-size: 50px;
     margin: auto 0 auto 0;
     text-shadow: 1px 1px 50px;
+
 }
 .s1{
     grid-column: 2;
@@ -51,7 +52,7 @@ label {
     grid-row: 3;
 }
 .result{
-    background-color: #9c9c9c;
+    background-color: #9c9c9c8c;
     display: flex;
     align-items: center;
     font-size: 40px;
@@ -119,16 +120,16 @@ label {
 }
 .input-grid{
     display: grid;
-    grid-template-columns: 116px 30px 116px 70px;
-    grid-template-rows: 116px 30px 116px 70px;
+    grid-template-columns: 116px 25px 116px 70px;
+    grid-template-rows: 116px 25px 116px 70px;
     place-items: center;
     margin-top: 40px;
     margin-left: 12%;
 }
 .botao{
-    position: fixed;
+    position: absolute;
     align-items: center;
-    margin: 60px 30px;
+    margin: 60px 30px 20% 01%;
     padding: 20px 36px;
     transition: all 0.2s ease;
     border-radius: 50px;
@@ -143,7 +144,7 @@ label {
     left: 0;
     display: block;
     border-radius: 50px;
-    background: #b6b6b6;
+    background: #9c9c9c8c;
     width: 95px;
     height: 95px;
     transition: all 0.5s ease;
@@ -170,7 +171,7 @@ label {
    }
 .botao:hover:before {
     width: 100%;
-    background: #b6b6b6;
+    background: #9c9c9c8c;
    }
 .botao:hover svg {
     transform: translateX(0);

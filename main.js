@@ -1,14 +1,14 @@
 
-// Função para gerar um número aleatório em um intervalo específico
+// Função para gerar um número aleatório
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Gerar números aleatórios para a, b, c e d
+// Gerar números aleatórios para re, rf, rg e rh
 const re = getRandomNumber(0, 10);
 const rf = getRandomNumber(0, 10);
-const rg = getRandomNumber(5, 10);
-const rh = getRandomNumber(0, 5);
+const rg = getRandomNumber(4, 10);
+const rh = getRandomNumber(0, 6);
 
 // Exibir as equações
 const resultA = document.querySelector(".a");
